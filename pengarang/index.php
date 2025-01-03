@@ -16,10 +16,10 @@ $pengarang = mysqli_query($mysqli, "SELECT * FROM pengarang ORDER BY nama_pengar
 
 <body>
     <center>
-        <a href="../index.php">Buku</a> |
-        <a href="../penerbit/index.php">Penerbit</a> |
-        <a href="index.php">Pengarang</a> |
-        <a href="../katalog/index.php">Katalog</a>
+        <a class="btn btn-primary rounded" href="../index.php">Buku</a> |
+        <a class="btn btn-primary rounded" href="../penerbit/index.php">Penerbit</a> |
+        <a class="btn btn-primary rounded" href="index.php">Pengarang</a> |
+        <a class="btn btn-primary rounded" href="../katalog/index.php">Katalog</a>
         <hr>
     </center>
 

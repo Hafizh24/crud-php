@@ -6,25 +6,27 @@ include_once("../connect.php");
 
 <head>
     <title>Add Katalog</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 </head>
 
 <body>
-    <a href="index.php">Go to Home</a>
+    <a class="btn btn-secondary" href="index.php">Go to Home</a>
     <br /><br />
 
     <form action="add.php" method="post" name="form1">
-        <table width="25%" border="0">
+        <table class="table table-borderless" width="50%" align="center">
             <tr>
                 <td>ID Katalog</td>
-                <td><input type="text" name="id_katalog"></td>
+                <td><input class="form-control" type="text" name="id_katalog"></td>
             </tr>
             <tr>
                 <td>Nama</td>
-                <td><input type="text" name="nama" required></td>
+                <td><input class="form-control" type="text" name="nama" required></td>
             </tr>
             <tr>
                 <td></td>
-                <td><input type="submit" name="Submit" value="Add"></td>
+                <td><input class="btn btn-success" type="submit" name="Submit" value="Add"></td>
             </tr>
         </table>
     </form>

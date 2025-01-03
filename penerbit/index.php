@@ -17,10 +17,10 @@ $penerbit = mysqli_query($mysqli, "SELECT * FROM penerbit ORDER BY nama_penerbit
 
 <body>
     <center>
-        <a href="../index.php">Buku</a> |
-        <a href="index.php">Penerbit</a> |
-        <a href="../pengarang/index.php">Pengarang</a> |
-        <a href="../katalog/index.php">Katalog</a>
+        <a class="btn btn-primary rounded" href="../index.php">Buku</a> |
+        <a class="btn btn-primary rounded" href="index.php">Penerbit</a> |
+        <a class="btn btn-primary rounded" href="../pengarang/index.php">Pengarang</a> |
+        <a class="btn btn-primary rounded" href="../katalog/index.php">Katalog</a>
         <hr>
     </center>
 

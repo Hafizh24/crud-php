@@ -16,38 +16,40 @@ while ($penerbit_data = mysqli_fetch_array($penerbit)) {
 
 <head>
     <title>Edit Penerbit</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 </head>
 
 <body>
-    <a href="index.php">Go to Home</a>
+    <a class="btn btn-secondary" href="index.php">Go to Home</a>
     <br /><br />
 
     <form action="edit.php?id_penerbit=<?php echo $id_penerbit; ?>" method="post">
-        <table width="25%" border="0">
+        <table class="table table-borderless" width="50%" align="center">
             <tr>
                 <td>ID Penerbit</td>
                 <td><?php echo $id_penerbit; ?> </td>
             </tr>
             <tr>
                 <td>Nama Penerbit</td>
-                <td><input type="text" name="nama_penerbit" value="<?php echo $nama_penerbit; ?>">
+                <td><input class="form-control" type="text" name="nama_penerbit" value="<?php echo $nama_penerbit; ?>">
                 </td>
             </tr>
             <tr>
                 <td>Email</td>
-                <td><input type="email" name="email" value="<?php echo $email; ?>"></td>
+                <td><input class="form-control" type="email" name="email" value="<?php echo $email; ?>"></td>
             </tr>
             <tr>
                 <td>Telepon</td>
-                <td><input type="text" name="telp" value="<?php echo $telp; ?>"></td>
+                <td><input class="form-control" type="text" name="telp" value="<?php echo $telp; ?>"></td>
             </tr>
             <tr>
                 <td>Alamat</td>
-                <td><input type="text" name="alamat" value="<?php echo $alamat; ?>"></td>
+                <td><input class="form-control" type="text" name="alamat" value="<?php echo $alamat; ?>"></td>
             </tr>
             <tr>
                 <td></td>
-                <td><input type="submit" name="update" value="Update"></td>
+                <td><input class="btn btn-success" type="submit" name="update" value="Update"></td>
             </tr>
         </table>
     </form>

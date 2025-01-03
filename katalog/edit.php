@@ -15,21 +15,23 @@ while ($katalog_data = mysqli_fetch_array($katalog_result)) {
 
 <head>
     <title>Edit Katalog</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 </head>
 
 <body>
-    <a href="index.php">Go to Home</a>
+    <a class="btn btn-secondary" href="index.php">Go to Home</a>
     <br /><br />
 
     <form action="edit.php?id_katalog=<?php echo $id_katalog; ?>" method="post" name="form1">
-        <table width="25%" border="0">
+        <table class="table table-borderless" width="50%" align="center">
             <tr>
                 <td>Nama</td>
-                <td><input type="text" name="nama" value="<?php echo $nama; ?>" required></td>
+                <td><input class="form-control" type="text" name="nama" value="<?php echo $nama; ?>" required></td>
             </tr>
             <tr>
                 <td></td>
-                <td><input type="submit" name="update" value="Update"></td>
+                <td><input class="btn btn-success" type="submit" name="update" value="Update"></td>
             </tr>
         </table>
     </form>

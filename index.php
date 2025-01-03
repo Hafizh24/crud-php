@@ -20,17 +20,17 @@ $buku = mysqli_query($mysqli, "SELECT buku.*, nama_pengarang, nama_penerbit, kat
 
 <body>
 
-    <center>
-        <a href="index.php">Buku</a> |
-        <a href="penerbit/index.php">Penerbit</a> |
-        <a href="#">Pengarang</a> |
-        <a href="#">Katalog</a>
+    <center class="pt-2">
+        <a class="btn btn-primary rounded" href="index.php">Buku</a>
+        <a class="btn btn-primary rounded" href="penerbit/index.php">Penerbit</a>
+        <a class="btn btn-primary rounded" href="pengarang/index.php">Pengarang</a>
+        <a class="btn btn-primary rounded" href="#">Katalog</a>
         <hr>
     </center>
 
-    <a href="add.php">Add New Buku</a><br /><br />
+    <a href="add.php" class="btn btn-success">Add New Buku</a><br /><br />
 
-    <table class="table" width='80%' border=1>
+    <table class="table table-bordered" width='80%' border=1>
 
         <tr>
             <th>ISBN</th>

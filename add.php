@@ -2,6 +2,8 @@
 
 <head>
     <title>Add Buku</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 </head>
 
 <?php
@@ -12,22 +14,22 @@ $katalog = mysqli_query($mysqli, "SELECT * FROM katalog");
 ?>
 
 <body>
-    <a href="index.php">Go to Home</a>
+    <a class="btn btn-secondary" href="index.php">Go to Home</a>
     <br /><br />
 
     <form action="add.php" method="post" name="form1">
-        <table width="25%" border="0">
+        <table class="table table-borderless" width="50%" align="center">
             <tr>
                 <td>ISBN</td>
-                <td><input type="text" name="isbn"></td>
+                <td><input class="form-control" type="text" name="isbn"></td>
             </tr>
             <tr>
                 <td>Judul</td>
-                <td><input type="text" name="judul"></td>
+                <td><input class="form-control" type="text" name="judul"></td>
             </tr>
             <tr>
                 <td>Tahun</td>
-                <td><input type="text" name="tahun"></td>
+                <td><input class="form-control" type="text" name="tahun"></td>
             </tr>
             <tr>
                 <td>Penerbit</td>
@@ -59,7 +61,7 @@ $katalog = mysqli_query($mysqli, "SELECT * FROM katalog");
                     <select name="id_katalog">
                         <?php
                         while ($katalog_data = mysqli_fetch_array($katalog)) {
-                            echo "<option value='" . $katalog_data['id_katalog'] . "'>" . $katalog_data['nama'] . "</option>";
+                            echo "<option   value='" . $katalog_data['id_katalog'] . "'>" . $katalog_data['nama'] . "</option>";
                         }
                         ?>
                     </select>
@@ -67,15 +69,15 @@ $katalog = mysqli_query($mysqli, "SELECT * FROM katalog");
             </tr>
             <tr>
                 <td>Qty Stok</td>
-                <td><input type="text" name="qty_stok"></td>
+                <td><input class="form-control" type="text" name="qty_stok"></td>
             </tr>
             <tr>
                 <td>Harga Pinjam</td>
-                <td><input type="text" name="harga_pinjam"></td>
+                <td><input class="form-control" type="text" name="harga_pinjam"></td>
             </tr>
             <tr>
                 <td></td>
-                <td><input type="submit" name="Submit" value="Add"></td>
+                <td><input class="btn btn-success" type="submit" name="Submit" value="Add"></td>
             </tr>
         </table>
     </form>
